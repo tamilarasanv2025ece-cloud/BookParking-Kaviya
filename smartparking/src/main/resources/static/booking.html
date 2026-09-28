@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Parking - Smart Parking</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="brand">
+
+        <div class="brand-icon">P</div>
+
+        <div>
+            <span class="brand-name">Smart Parking</span>
+            <span class="brand-subtitle">
+                Parking Management System
+            </span>
+        </div>
+
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/index.html">Home</a>
+
+        <a href="/parking.html">Parking</a>
+
+        <a href="/booking.html" class="active">
+            Book Parking
+        </a>
+
+        <a href="/dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="/admin.html">
+            Admin
+        </a>
+
+    </div>
+
+</nav>
+
+
+<main class="page-container">
+
+    <div class="page-heading">
+
+        <div>
+
+            <span class="eyebrow">
+                BOOKING
+            </span>
+
+            <h1>
+                Book Parking Slot
+            </h1>
+
+            <p>
+                Enter your booking details and reserve a parking slot.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <section class="form-card">
+
+        <div class="form-card-header">
+
+            <div class="form-icon">
+                P
+            </div>
+
+            <div>
+
+                <h2>
+                    Booking Details
+                </h2>
+
+                <p>
+                    Select the parking slot and booking time.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <form onsubmit="createBooking(event)">
+
+            <div class="form-group">
+
+                <label for="slotId">
+                    Parking Slot
+                </label>
+
+                <input
+                        type="number"
+                        id="slotId"
+                        name="slotId"
+                        placeholder="Enter parking slot ID"
+                        required
+                >
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="startTime">
+                        Start Time
+                    </label>
+
+                    <input
+                            type="datetime-local"
+                            id="startTime"
+                            name="startTime"
+                            required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="endTime">
+                        End Time
+                    </label>
+
+                    <input
+                            type="datetime-local"
+                            id="endTime"
+                            name="endTime"
+                            required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <button
+                    type="submit"
+                    class="primary-btn full-btn">
+                Confirm Booking
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <section class="content-card">
+
+        <div class="card-heading">
+
+            <div>
+
+                <span class="eyebrow">
+                    INFORMATION
+                </span>
+
+                <h2>
+                    Booking Instructions
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="info-grid">
+
+            <div class="info-card">
+
+                <h3>1. Select Slot</h3>
+
+                <p>
+                    Choose an available parking slot from the Parking page.
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h3>2. Enter Time</h3>
+
+                <p>
+                    Select your starting and ending time.
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h3>3. Confirm</h3>
+
+                <p>
+                    Click Confirm Booking to reserve the slot.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="/js/app.js"></script>
+
+</body>
+
+</html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Parking - Smart Parking</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="brand">
+
+        <div class="brand-icon">P</div>
+
+        <div>
+            <span class="brand-name">Smart Parking</span>
+            <span class="brand-subtitle">
+                Parking Management System
+            </span>
+        </div>
+
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/index.html">Home</a>
+
+        <a href="/parking.html">Parking</a>
+
+        <a href="/booking.html" class="active">
+            Book Parking
+        </a>
+
+        <a href="/dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="/admin.html">
+            Admin
+        </a>
+
+    </div>
+
+</nav>
+
+
+<main class="page-container">
+
+    <div class="page-heading">
+
+        <div>
+
+            <span class="eyebrow">
+                BOOKING
+            </span>
+
+            <h1>
+                Book Parking Slot
+            </h1>
+
+            <p>
+                Enter your booking details and reserve a parking slot.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <section class="form-card">
+
+        <div class="form-card-header">
+
+            <div class="form-icon">
+                P
+            </div>
+
+            <div>
+
+                <h2>
+                    Booking Details
+                </h2>
+
+                <p>
+                    Select the parking slot and booking time.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <form onsubmit="createBooking(event)">
+
+            <div class="form-group">
+
+                <label for="slotId">
+                    Parking Slot
+                </label>
+
+                <input
+                        type="number"
+                        id="slotId"
+                        name="slotId"
+                        placeholder="Enter parking slot ID"
+                        required
+                >
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="startTime">
+                        Start Time
+                    </label>
+
+                    <input
+                            type="datetime-local"
+                            id="startTime"
+                            name="startTime"
+                            required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="endTime">
+                        End Time
+                    </label>
+
+                    <input
+                            type="datetime-local"
+                            id="endTime"
+                            name="endTime"
+                            required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <button
+                    type="submit"
+                    class="primary-btn full-btn">
+                Confirm Booking
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <section class="content-card">
+
+        <div class="card-heading">
+
+            <div>
+
+                <span class="eyebrow">
+                    INFORMATION
+                </span>
+
+                <h2>
+                    Booking Instructions
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="info-grid">
+
+            <div class="info-card">
+
+                <h3>1. Select Slot</h3>
+
+                <p>
+                    Choose an available parking slot from the Parking page.
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h3>2. Enter Time</h3>
+
+                <p>
+                    Select your starting and ending time.
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h3>3. Confirm</h3>
+
+                <p>
+                    Click Confirm Booking to reserve the slot.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="/js/app.js"></script>
+
+</body>
+
+</html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Parking - Smart Parking</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="brand">
+
+        <div class="brand-icon">P</div>
+
+        <div>
+            <span class="brand-name">Smart Parking</span>
+            <span class="brand-subtitle">
+                Parking Management System
+            </span>
+        </div>
+
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/index.html">Home</a>
+
+        <a href="/parking.html">Parking</a>
+
+        <a href="/booking.html" class="active">
+            Book Parking
+        </a>
+
+        <a href="/dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="/admin.html">
+            Admin
+        </a>
+
+    </div>
+
+</nav>
+
+
+<main class="page-container">
+
+    <div class="page-heading">
+
+        <div>
+
+            <span class="eyebrow">
+                BOOKING
+            </span>
+
+            <h1>
+                Book Parking Slot
+            </h1>
+
+            <p>
+                Enter your booking details and reserve a parking slot.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <section class="form-card">
+
+        <div class="form-card-header">
+
+            <div class="form-icon">
+                P
+            </div>
+
+            <div>
+
+                <h2>
+                    Booking Details
+                </h2>
+
+                <p>
+                    Select the parking slot and booking time.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <form onsubmit="createBooking(event)">
+
+            <div class="form-group">
+
+                <label for="slotId">
+                    Parking Slot
+                </label>
+
+                <input
+                        type="number"
+                        id="slotId"
+                        name="slotId"
+                        placeholder="Enter parking slot ID"
+                        required
+                >
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="startTime">
+                        Start Time
+                    </label>
+
+                    <input
+                            type="datetime-local"
+                            id="startTime"
+                            name="startTime"
+                            required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="endTime">
+                        End Time
+                    </label>
+
+                    <input
+                            type="datetime-local"
+                            id="endTime"
+                            name="endTime"
+                            required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <button
+                    type="submit"
+                    class="primary-btn full-btn">
+                Confirm Booking
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <section class="content-card">
+
+        <div class="card-heading">
+
+            <div>
+
+                <span class="eyebrow">
+                    INFORMATION
+                </span>
+
+                <h2>
+                    Booking Instructions
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="info-grid">
+
+            <div class="info-card">
+
+                <h3>1. Select Slot</h3>
+
+                <p>
+                    Choose an available parking slot from the Parking page.
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h3>2. Enter Time</h3>
+
+                <p>
+                    Select your starting and ending time.
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h3>3. Confirm</h3>
+
+                <p>
+                    Click Confirm Booking to reserve the slot.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="/js/app.js"></script>
+
+</body>
+
+</html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Parking - Smart Parking</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="brand">
+
+        <div class="brand-icon">P</div>
+
+        <div>
+            <span class="brand-name">Smart Parking</span>
+            <span class="brand-subtitle">
+                Parking Management System
+            </span>
+        </div>
+
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/index.html">Home</a>
+
+        <a href="/parking.html">Parking</a>
+
+        <a href="/booking.html" class="active">
+            Book Parking
+        </a>
+
+        <a href="/dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="/admin.html">
+            Admin
+        </a>
+
+    </div>
+
+</nav>
+
+
+<main class="page-container">
+
+    <div class="page-heading">
+
+        <div>
+
+            <span class="eyebrow">
+                BOOKING
+            </span>
+
+            <h1>
+                Book Parking Slot
+            </h1>
+
+            <p>
+                Enter your booking details and reserve a parking slot.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <section class="form-card">
+
+        <div class="form-card-header">
+
+            <div class="form-icon">
+                P
+            </div>
+
+            <div>
+
+                <h2>
+                    Booking Details
+                </h2>
+
+                <p>
+                    Select the parking slot and booking time.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <form onsubmit="createBooking(event)">
+
+            <div class="form-group">
+
+                <label for="slotId">
+                    Parking Slot
+                </label>
+
+                <input
+                        type="number"
+                        id="slotId"
+                        name="slotId"
+                        placeholder="Enter parking slot ID"
+                        required
+                >
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="startTime">
+                        Start Time
+                    </label>
+
+                    <input
+                            type="datetime-local"
+                            id="startTime"
+                            name="startTime"
+                            required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="endTime">
+                        End Time
+                    </label>
+
+                    <input
+                            type="datetime-local"
+                            id="endTime"
+                            name="endTime"
+                            required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <button
+                    type="submit"
+                    class="primary-btn full-btn">
+                Confirm Booking
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <section class="content-card">
+
+        <div class="card-heading">
+
+            <div>
+
+                <span class="eyebrow">
+                    INFORMATION
+                </span>
+
+                <h2>
+                    Booking Instructions
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="info-grid">
+
+            <div class="info-card">
+
+                <h3>1. Select Slot</h3>
+
+                <p>
+                    Choose an available parking slot from the Parking page.
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h3>2. Enter Time</h3>
+
+                <p>
+                    Select your starting and ending time.
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h3>3. Confirm</h3>
+
+                <p>
+                    Click Confirm Booking to reserve the slot.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="/js/app.js"></script>
+
+</body>
+
+</html>

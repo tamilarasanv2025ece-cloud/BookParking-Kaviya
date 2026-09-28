@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - Smart Parking</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="brand">
+        <div class="brand-icon">P</div>
+
+        <div>
+            <span class="brand-name">Smart Parking</span>
+            <span class="brand-subtitle">Parking Management System</span>
+        </div>
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/index.html">Home</a>
+        <a href="/parking.html">Parking</a>
+        <a href="/booking.html">Book Parking</a>
+        <a href="/dashboard.html" class="active">Dashboard</a>
+        <a href="/admin.html">Admin</a>
+
+    </div>
+
+</nav>
+
+
+<main class="page-container">
+
+    <div class="page-heading">
+
+        <div>
+            <span class="eyebrow">OVERVIEW</span>
+
+            <h1>Parking Dashboard</h1>
+
+            <p>
+                Monitor your parking activity and booking information.
+            </p>
+        </div>
+
+        <a href="/parking.html" class="primary-btn">
+            + Book Parking
+        </a>
+
+    </div>
+
+
+    <section class="stats-grid">
+
+        <div class="stat-card">
+
+            <div class="stat-icon green">P</div>
+
+            <div>
+                <span>Available Parking</span>
+                <strong id="availableParking">0</strong>
+                <small>Slots available now</small>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon blue">B</div>
+
+            <div>
+                <span>Total Bookings</span>
+                <strong id="myBookings">0</strong>
+                <small>All bookings</small>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon purple">₹</div>
+
+            <div>
+                <span>Total Payments</span>
+                <strong id="myPayments">0</strong>
+                <small>Payment records</small>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon orange">!</div>
+
+            <div>
+                <span>Total Penalties</span>
+                <strong id="myPenalties">0</strong>
+                <small>Penalty records</small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="content-card">
+
+        <div class="card-heading">
+
+            <div>
+                <span class="eyebrow">BOOKINGS</span>
+                <h2>Booking Details</h2>
+            </div>
+
+            <a href="/booking.html" class="outline-btn">
+                New Booking
+            </a>
+
+        </div>
+
+
+        <div id="bookingDetails" class="booking-details">
+
+            <div class="loading-box">
+                Loading bookings...
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="/js/app.js"></script>
+
+</body>
+</html>
